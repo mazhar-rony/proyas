@@ -23,7 +23,18 @@
         th, td {
             border: 1px solid black;
             padding: 5px;
+        }
+        th {
+            text-align: center;
+        }
+        td {
+            text-align: right;
+        }
+        .text-left {
             text-align: left;
+        }
+        tfoot td{
+            font-weight: bold;
         }
     </style>
 </head>
@@ -41,24 +52,179 @@
     <!-- Section 1: Samity and Members Information -->
     <h3>1. Samity and Members Information</h3>
     <table>
+        <thead>
         <tr>
-            <th>Program</th>
+            <th rowspan="2">Program</th>
+            <th colspan="3">Samities</th>
+            <th colspan="3">Members</th>
+        </tr>
+        <tr>
+            {{-- <th>Program</th> --}}
+            <th>Male</th>
+            <th>Female</th>
+            <th>Total</th>
             <th>Male</th>
             <th>Female</th>
             <th>Total</th>
         </tr>
+        </thead>
+        <tbody>
         <tr>
-            <td>Jagoron</td>
+            <td class="text-left">Jagoron</td>
             <td>0</td>
             <td>94</td>
+            <td>94</td>
+            <td>12</td>
+            <td>1084</td>
             <td>1096</td>
         </tr>
         <tr>
-            <td>Agrosor</td>
+            <td class="text-left">Agrosor</td>
             <td>0</td>
             <td>83</td>
+            <td>83</td>
+            <td>11</td>
+            <td>321</td>
             <td>332</td>
         </tr>
+        <tr>
+            <td class="text-left">Buniad</td>
+            <td>0</td>
+            <td>83</td>
+            <td>83</td>
+            <td>11</td>
+            <td>321</td>
+            <td>332</td>
+        </tr>
+        <tr>
+            <td class="text-left">ENRICH IGA</td>
+            <td>0</td>
+            <td>83</td>
+            <td>83</td>
+            <td>11</td>
+            <td>321</td>
+            <td>332</td>
+        </tr>
+        <tr>
+            <td class="text-left">LEPIG</td>
+            <td>0</td>
+            <td>83</td>
+            <td>83</td>
+            <td>11</td>
+            <td>321</td>
+            <td>332</td>
+        </tr>
+        <tr>
+            <td class="text-left">Proyas SME</td>
+            <td>0</td>
+            <td>83</td>
+            <td>83</td>
+            <td>11</td>
+            <td>321</td>
+            <td>332</td>
+        </tr>
+        <tr>
+            <td class="text-left">Agrosor- SMART Loan</td>
+            <td>0</td>
+            <td>83</td>
+            <td>83</td>
+            <td>11</td>
+            <td>321</td>
+            <td>332</td>
+        </tr>
+        <tr>
+            <td class="text-left">Agrosor-MFCE Loan</td>
+            <td>0</td>
+            <td>83</td>
+            <td>83</td>
+            <td>11</td>
+            <td>321</td>
+            <td>332</td>
+        </tr>
+        <tr>
+            <td class="text-left">Agrosor-Raise Loan</td>
+            <td>0</td>
+            <td>83</td>
+            <td>83</td>
+            <td>11</td>
+            <td>321</td>
+            <td>332</td>
+        </tr>
+        <tr>
+            <td class="text-left">Agrosor-SEP Loan</td>
+            <td>0</td>
+            <td>83</td>
+            <td>83</td>
+            <td>11</td>
+            <td>321</td>
+            <td>332</td>
+        </tr>
+        <tr>
+            <td class="text-left">Common Service Loan-SEP</td>
+            <td>0</td>
+            <td>83</td>
+            <td>83</td>
+            <td>11</td>
+            <td>321</td>
+            <td>332</td>
+        </tr>
+        <tr>
+            <td class="text-left">ECCCP-Drought Loan</td>
+            <td>0</td>
+            <td>83</td>
+            <td>83</td>
+            <td>11</td>
+            <td>321</td>
+            <td>332</td>
+        </tr>
+        <tr>
+            <td class="text-left">KGF Loan</td>
+            <td>0</td>
+            <td>83</td>
+            <td>83</td>
+            <td>11</td>
+            <td>321</td>
+            <td>332</td>
+        </tr>
+        <tr>
+            <td class="text-left">Lift Loan</td>
+            <td>0</td>
+            <td>83</td>
+            <td>83</td>
+            <td>11</td>
+            <td>321</td>
+            <td>332</td>
+        </tr>
+        <tr>
+            <td class="text-left">Lift Loan</td>
+            <td>0</td>
+            <td>83</td>
+            <td>83</td>
+            <td>11</td>
+            <td>321</td>
+            <td>332</td>
+        </tr>
+        <tr>
+            <td class="text-left">Sufolon Loan</td>
+            <td>0</td>
+            <td>83</td>
+            <td>83</td>
+            <td>11</td>
+            <td>321</td>
+            <td>332</td>
+        </tr>
+        </tbody>
+        <tfoot>
+        <tr>
+            <td class="text-left">Total</td>
+            <td>0</td>
+            <td>83</td>
+            <td>83</td>
+            <td>11</td>
+            <td>321</td>
+            <td>332</td>
+        </tr>
+        </tfoot>
         <!-- More rows as needed -->
     </table>
 
