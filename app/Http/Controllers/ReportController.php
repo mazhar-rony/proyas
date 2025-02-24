@@ -21,6 +21,28 @@ class ReportController extends Controller
 
         $mpdf->SetTitle('Consolidate Report-'. time());
 
+        $mpdf->setAutoTopMargin = 'stretch';
+
+        $mpdf->setAutoBottomMargin = 'stretch';
+
+        //$mpdf->SetFooter('{PAGENO} of {nb}', 'O');  // 'O' removes the default line
+
+        // Set custom footer without horizontal line using inline CSS
+        // $footerHtml = '<div style="text-align:right; padding-top: 10px; display: flex; justify-content: space-between;">
+        // <p>Printed Date: </p>
+        // <p>Page {PAGENO} of {nb}</p>
+        // </div>';
+
+        $footerHtml = '
+            <table width="100%" style="border-collapse: collapse; border: none;">
+                <tr style="border: none;">
+                    <td style="text-align:left; padding-top: 10px; border: none;">Printed Date: ' . date('d-m-Y') . '</td>
+                    <td style="text-align:right; padding-top: 10px; border: none;">Page {PAGENO} of {nb}</td>
+                </tr>
+            </table>';
+        
+        $mpdf->SetHTMLFooter($footerHtml);
+
         $mpdf->WriteHTML($html);
         
         $mpdf->Output();

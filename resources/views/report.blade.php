@@ -249,8 +249,23 @@
         </tfoot>
         <!-- More rows as needed -->
     </table>
-
-    <p>Prepared By: _______  | Checked By: _______ | Approved By: _______</p>
+    
+    <table style="margin-top: 40%; margin-bottom: 0px; border:none;" width="100%">
+        <tr style="border: none;">
+            <td style="text-align: left; width: 33%; border: none;">
+                <p>------------------------</p>
+                <p style="font-size: 12px;">Prepared By</p>
+            </td>
+            <td style="text-align: center; width: 33%; border: none;">
+                <p>------------------------</p>
+                <p style="font-size: 12px">Checked By</p>
+            </td>
+            <td style="text-align: right; width: 33%; border: none;">
+                <p>------------------------</p>
+                <p style="font-size: 12px">Approved By</p>
+            </td>
+        </tr>
+    </table>
 
     <div class="page-break"></div>
 
@@ -598,7 +613,22 @@
         <!-- More rows as needed -->
     </table>
 
-    <p>Prepared By: _______  | Checked By: _______ | Approved By: _______</p>
+    <table style="margin-top: 8%; margin-bottom: 0px; border:none;" width="100%">
+        <tr style="border: none;">
+            <td style="text-align: left; width: 33%; border: none;">
+                <p>------------------------</p>
+                <p style="font-size: 14px;">Prepared By</p>
+            </td>
+            <td style="text-align: center; width: 33%; border: none;">
+                <p>------------------------</p>
+                <p style="font-size: 14px">Checked By</p>
+            </td>
+            <td style="text-align: right; width: 33%; border: none;">
+                <p>------------------------</p>
+                <p style="font-size: 14px">Approved By</p>
+            </td>
+        </tr>
+    </table>
 
     <div class="page-break"></div>
 
@@ -736,6 +766,23 @@
         </tfoot>
         <!-- More rows as needed -->
     </table>
-    <p>Prepared By: _______  | Checked By: _______ | Approved By: _______</p>
+    
+    <table style="margin-top: 80%; margin-bottom: 0px; border:none;" width="100%">
+        <tr style="border: none;">
+            <td style="text-align: left; width: 33%; border: none;">
+                <p>------------------------</p>
+                <p style="font-size: 14px;">Prepared By</p>
+            </td>
+            <td style="text-align: center; width: 33%; border: none;">
+                <p>------------------------</p>
+                <p style="font-size: 14px">Checked By</p>
+            </td>
+            <td style="text-align: right; width: 33%; border: none;">
+                <p>------------------------</p>
+                <p style="font-size: 14px">Approved By</p>
+            </td>
+        </tr>
+    </table>
+
 </body>
 </html>
