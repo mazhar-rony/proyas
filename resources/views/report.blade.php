@@ -24,13 +24,27 @@
         }
         th, td {
             border: 1px solid black;
-            padding: 5px 2px;
+            padding: 5px 5px;
+        }
+        th {
+            text-align: center;
+        }
+        td {
+            text-align: right;
+        }
+        .text-left {
             text-align: left;
+        }
+        .text-center {
+            text-align: center;
+        }
+        .text-right {
+            text-align: right;
         }
         @page {
             margin-top: 4cm;
             margin-header: 2cm;
-            margin-footer: 2cm;
+            margin-footer: 0cm;
             header: page-header;
             footer: page-footer;
         }
@@ -60,33 +74,31 @@
     
     <htmlpagefooter name="page-footer">
         <div class="footer">
-            
-            
-            <table style="border: none; width: 100%; border-collapse: collapse;margin-bottom:20px;">
+            <table style="border: none; width: 100%; border-collapse: collapse; margin-bottom: 40px;">
                 <tr>
-                    <td style="vertical-align: middle; height: 100%; border: none;">
+                    <td style="text-align: left; vertical-align: middle; height: 100%; border: none;">
                         <div style="display: inline-block; text-align: center;">
                             <span>---------------------</span><br>
-                            <span><strong>Prepared By</strong></span>
+                            <span>Prepared By</span>
                         </div>
                     </td>
                     <td style="text-align: center; vertical-align: middle; height: 100%; border: none;">
                         <div style="display: inline-block; text-align: center;">
                             <span>---------------------</span><br>
-                            <span><strong>Checked By</strong></span>
+                            <span>Checked By</span>
                         </div>
                     </td>
                     <td style="text-align: right; vertical-align: middle; height: 100%; border: none;">
                         <div style="display: inline-block; text-align: center;">
                             <span>---------------------</span><br>
-                            <span><strong>Approved By</strong></span>
+                            <span>Approved By</span>
                         </div>
                     </td>
                 </tr>
             </table>
-            <table style="border: none; width: 100%; border-collapse: collapse;">
+            <table style="border: none; width: 100%; border-collapse: collapse; margin-bottom:20px;">
                 <tr>
-                    <td style="border: none;">
+                    <td style="border: none; text-align: left;">
                         @php
                             echo "Printed Date : ". date('d-M-Y');
                         @endphp
@@ -96,14 +108,12 @@
                     </td>
                 </tr>
             </table>
-            
-                      
         </div>
-    
     </htmlpagefooter>
    
 
     <h3>1. Samity and Members Information</h3>
+
     <table>
         <tr>
             <th rowspan="2">Program</th>
@@ -119,7 +129,7 @@
             <th>Total</th>
         </tr>
         <tr>
-            <td>Jagoron</td>
+            <td class="text-left">Jagoron</td>
             <td>1001</td>
             <td>96</td>
             <td>1096</td>
@@ -128,7 +138,7 @@
             <td>50</td>
         </tr>
         <tr>
-            <td>Agrosor</td>
+            <td class="text-left">Agrosor</td>
             <td>334</td>
             <td>8</td>
             <td>332</td>
@@ -137,7 +147,7 @@
             <td>22</td>
         </tr>
         <tr>
-            <td>Jagoron</td>
+            <td class="text-left">Buniad</td>
             <td>1001</td>
             <td>96</td>
             <td>1096</td>
@@ -146,7 +156,7 @@
             <td>50</td>
         </tr>
         <tr>
-            <td>Buniad</td>
+            <td class="text-left">ENRICH IGA</td>
             <td>334</td>
             <td>8</td>
             <td>332</td>
@@ -155,7 +165,7 @@
             <td>22</td>
         </tr>
         <tr>
-            <td>ENRICH</td>
+            <td class="text-left">LEPIG</td>
             <td>1001</td>
             <td>96</td>
             <td>1096</td>
@@ -164,7 +174,7 @@
             <td>50</td>
         </tr>
         <tr>
-            <td>LEPIG</td>
+            <td class="text-left">Proyas SME</td>
             <td>334</td>
             <td>8</td>
             <td>332</td>
@@ -173,7 +183,7 @@
             <td>22</td>
         </tr>
         <tr>
-            <td> Proyas SME</td>
+            <td class="text-left">Agrosor- SMART Loan</td>
             <td>1001</td>
             <td>96</td>
             <td>1096</td>
@@ -182,7 +192,7 @@
             <td>50</td>
         </tr>
         <tr>
-            <td>Agrosor- SMART Loan</td>
+            <td class="text-left">Agrosor-MFCE Loan</td>
             <td>334</td>
             <td>8</td>
             <td>332</td>
@@ -191,7 +201,7 @@
             <td>22</td>
         </tr>
         <tr>
-            <td> Agrosor-MFCE Loan</td>
+            <td class="text-left">Agrosor-Raise Loan</td>
             <td>1001</td>
             <td>96</td>
             <td>1096</td>
@@ -200,7 +210,7 @@
             <td>50</td>
         </tr>
         <tr>
-            <td>Agrosor-Raise Loan</td>
+            <td class="text-left">Agrosor-SEP Loan</td>
             <td>334</td>
             <td>8</td>
             <td>332</td>
@@ -209,7 +219,7 @@
             <td>22</td>
         </tr>
         <tr>
-            <td>Agrosor-SEP Loan</td>
+            <td class="text-left">Common Service Loan-SEP</td>
             <td>1001</td>
             <td>96</td>
             <td>1096</td>
@@ -218,7 +228,7 @@
             <td>50</td>
         </tr>
         <tr>
-            <td> Common Service Loan-SEP</td>
+            <td class="text-left">ECCCP-Drought Loan</td>
             <td>334</td>
             <td>8</td>
             <td>332</td>
@@ -227,7 +237,7 @@
             <td>22</td>
         </tr>
         <tr>
-            <td>ECCCP-Drought Loan</td>
+            <td class="text-left">KGF Loan</td>
             <td>1001</td>
             <td>96</td>
             <td>1096</td>
@@ -236,7 +246,7 @@
             <td>50</td>
         </tr>
         <tr>
-            <td> KGF Loan</td>
+            <td class="text-left">Lift Loan</td>
             <td>334</td>
             <td>8</td>
             <td>332</td>
@@ -245,7 +255,7 @@
             <td>22</td>
         </tr>
         <tr>
-            <td>Lift Loan</td>
+            <td class="text-left">Lift Loan</td>
             <td>1001</td>
             <td>96</td>
             <td>1096</td>
@@ -254,7 +264,7 @@
             <td>50</td>
         </tr>
         <tr>
-            <td>Sufolon Loan</td>
+            <td class="text-left">Sufolon Loan</td>
             <td>334</td>
             <td>8</td>
             <td>332</td>
@@ -263,18 +273,21 @@
             <td>22</td>
         </tr>
         <tr>
-            <td><strong>Total</strong></td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
+            <td class="text-left"><strong>Total</strong></td>
+            <td><strong>0</strong></td>
+            <td><strong>94</strong></td>
+            <td><strong>94</strong></td>
+            <td><strong>31</strong></td>
+            <td><strong>1950</strong></td>
+            <td><strong>1981</strong></td>
         </tr>
        
     </table>
+
     <pagebreak />
+
     <h3>2. Savings Statement</h3>
+
     <table>
         <tr>
             <th rowspan="2">Program</th>
@@ -283,7 +296,7 @@
             <th colspan="2">Savings Transfer This Month(Cat.Tr) </th>
             <th colspan="2">Savings Withdrwal This Month</th>
             <th colspan="2">Savings Balance End of Month</th>
-            <th rowspan="2"> Total Savings Balance </th>
+            <th rowspan="2">Total Savings Balance </th>
         </tr>
 
         <tr>
@@ -299,10 +312,10 @@
             <th>Female</th>
         </tr>
         <tr>
-            <th colspan="12">Jagoron</th>
+            <th colspan="12" style="text-align: left;">Jagoron</th>
         </tr>
         <tr>
-            <td>General Savings</td>
+            <td class="text-left" style="width: 15%;">General Savings</td>
             <td>11</td>
             <td>22</td>
             <td>33</td>
@@ -316,7 +329,7 @@
             <td>1111111111</td>
         </tr>
         <tr>
-            <td>Volentary Saving</td>
+            <td class="text-left" style="width: 15%;">General Savings</td>
             <td>11</td>
             <td>22</td>
             <td>33</td>
@@ -330,7 +343,7 @@
             <td>1111111111</td>
         </tr>
         <tr>
-            <td>Volentary Saving</td>
+            <td class="text-left" style="width: 15%;">Volentary Saving</td>
             <td>11</td>
             <td>22</td>
             <td>33</td>
@@ -344,7 +357,7 @@
             <td>1111111111</td>
         </tr>
         <tr>
-            <td>Proyas S.Savings</td>
+            <td class="text-left" style="width: 15%;">Proyas S.Savings</td>
             <td>11</td>
             <td>22</td>
             <td>33</td>
@@ -358,7 +371,7 @@
             <td>1111111111</td>
         </tr>
         <tr>
-            <td> Category Total</td>
+            <td class="text-center" style="width: 15%;"><strong>Category Total</strong></td>
             <td>11</td>
             <td>22</td>
             <td>33</td>
@@ -372,10 +385,10 @@
             <td>1111111111</td>
         </tr>
         <tr>
-            <th colspan="12">Agrosor</th>
+            <th colspan="12" style="text-align: left;">Agrosor</th>
         </tr>
         <tr>
-            <td>General Savings</td>
+            <td class="text-left" style="width: 15%;">General Savings</td>
             <td>11</td>
             <td>22</td>
             <td>33</td>
@@ -389,7 +402,7 @@
             <td>1111111111</td>
         </tr>
         <tr>
-            <td>Volentary Saving</td>
+            <td class="text-left" style="width: 15%;">General Savings</td>
             <td>11</td>
             <td>22</td>
             <td>33</td>
@@ -403,7 +416,7 @@
             <td>1111111111</td>
         </tr>
         <tr>
-            <td>Volentary Saving</td>
+            <td class="text-left" style="width: 15%;">Volentary Saving</td>
             <td>11</td>
             <td>22</td>
             <td>33</td>
@@ -417,7 +430,7 @@
             <td>1111111111</td>
         </tr>
         <tr>
-            <td>Proyas S.Savings</td>
+            <td class="text-left" style="width: 15%;">Proyas S.Savings</td>
             <td>11</td>
             <td>22</td>
             <td>33</td>
@@ -431,81 +444,7 @@
             <td>1111111111</td>
         </tr>
         <tr>
-            <td> Category Total</td>
-            <td>11</td>
-            <td>22</td>
-            <td>33</td>
-            <td>44</td>
-            <td>55</td>
-            <td>66</td>
-            <td>77</td>
-            <td>88</td>
-            <td>99</td>
-            <td>00</td>
-            <td>1111111111</td>
-        </tr>
-        {{--  --}}
-        <tr>
-            <th colspan="12">Buniad</th>
-        </tr>
-        <tr>
-            <td>General Savings</td>
-            <td>11</td>
-            <td>22</td>
-            <td>33</td>
-            <td>44</td>
-            <td>55</td>
-            <td>66</td>
-            <td>77</td>
-            <td>88</td>
-            <td>99</td>
-            <td>00</td>
-            <td>1111111111</td>
-        </tr>
-        <tr>
-            <td>Volentary Saving</td>
-            <td>11</td>
-            <td>22</td>
-            <td>33</td>
-            <td>44</td>
-            <td>55</td>
-            <td>66</td>
-            <td>77</td>
-            <td>88</td>
-            <td>99</td>
-            <td>00</td>
-            <td>1111111111</td>
-        </tr>
-        <tr>
-            <td>Volentary Saving</td>
-            <td>11</td>
-            <td>22</td>
-            <td>33</td>
-            <td>44</td>
-            <td>55</td>
-            <td>66</td>
-            <td>77</td>
-            <td>88</td>
-            <td>99</td>
-            <td>00</td>
-            <td>1111111111</td>
-        </tr>
-        <tr>
-            <td>Proyas S.Savings</td>
-            <td>11</td>
-            <td>22</td>
-            <td>33</td>
-            <td>44</td>
-            <td>55</td>
-            <td>66</td>
-            <td>77</td>
-            <td>88</td>
-            <td>99</td>
-            <td>00</td>
-            <td>1111111111</td>
-        </tr>
-        <tr>
-            <td><strong>Category Total</strong></td>
+            <td class="text-center" style="width: 15%;"><strong>Category Total</strong></td>
             <td>11</td>
             <td>22</td>
             <td>33</td>
@@ -520,36 +459,10 @@
         </tr>
         {{--  --}}
         <tr>
-            <td><strong>Total</strong></td>
-            <td>11</td>
-            <td>22</td>
-            <td>33</td>
-            <td>44</td>
-            <td>55</td>
-            <td>66</td>
-            <td>77</td>
-            <td>88</td>
-            <td>99</td>
-            <td>00</td>
-            <td>1111111111</td>
-            
+            <th colspan="12" style="text-align: left;">Buniad</th>
         </tr>
         <tr>
-            <td><strong>Grand Total</strong></td>
-            <td colspan="2"><strong>11</strong></td>
-            {{-- <td>22</td> --}}
-            <td colspan="2"><strong>33</strong></td>
-            {{-- <td>44</td> --}}
-            {{-- <td>55</td> --}}
-            <td colspan="2"><strong>66</strong></td>
-            {{-- <td>77</td> --}}
-            {{-- <td>88</td> --}}
-            <td colspan="2"><strong>99</strong></td>
-            {{-- <td>00</td> --}}
-            <td colspan="2"><strong>1111111111</strong></td>
-        </tr>
-        <tr>
-            <td> General Savings</td>
+            <td class="text-left" style="width: 15%;">General Savings</td>
             <td>11</td>
             <td>22</td>
             <td>33</td>
@@ -563,7 +476,7 @@
             <td>1111111111</td>
         </tr>
         <tr>
-            <td>General Savings</td>
+            <td class="text-left" style="width: 15%;">General Savings</td>
             <td>11</td>
             <td>22</td>
             <td>33</td>
@@ -577,7 +490,7 @@
             <td>1111111111</td>
         </tr>
         <tr>
-            <td> Proyas S.Savings</td>
+            <td class="text-left" style="width: 15%;">Volentary Saving</td>
             <td>11</td>
             <td>22</td>
             <td>33</td>
@@ -589,11 +502,116 @@
             <td>99</td>
             <td>00</td>
             <td>1111111111</td>
+        </tr>
+        <tr>
+            <td class="text-left" style="width: 15%;">Proyas S.Savings</td>
+            <td>11</td>
+            <td>22</td>
+            <td>33</td>
+            <td>44</td>
+            <td>55</td>
+            <td>66</td>
+            <td>77</td>
+            <td>88</td>
+            <td>99</td>
+            <td>00</td>
+            <td>1111111111</td>
+        </tr>
+        <tr>
+            <td class="text-center" style="width: 15%;"><strong>Category Total</strong></td>
+            <td>11</td>
+            <td>22</td>
+            <td>33</td>
+            <td>44</td>
+            <td>55</td>
+            <td>66</td>
+            <td>77</td>
+            <td>88</td>
+            <td>99</td>
+            <td>00</td>
+            <td>1111111111</td>
+        </tr>
+        <tr>
+            <td class="text-center" style="width: 15%;"><strong>Total</strong></td>
+            <td>11</td>
+            <td>22</td>
+            <td>33</td>
+            <td>44</td>
+            <td>55</td>
+            <td>66</td>
+            <td>77</td>
+            <td>88</td>
+            <td>99</td>
+            <td>00</td>
+            <td>1111111111</td>
+        </tr>
+        <tr>
+            <td class="text-center" style="width: 15%;"><strong>Grand Total</strong></td>
+            <td colspan="2"><strong>33310886</strong></td>
+            <td colspan="2"><strong>1280909</strong></td>
+            <td colspan="2"><strong>0</strong></td>
+            <td colspan="2"><strong>1708530</strong></td>
+            <td colspan="2"><strong>32883265</strong></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="text-left" style="width: 15%;">General Savings</td>
+            <td>184457</td>
+            <td>4791346</td>
+            <td>5500</td>
+            <td>4400</td>
+            <td colspan="2"></td>
+            <td>73100</td>
+            <td>122843</td>
+            <td>116857</td>
+            <td>4839118</td>
+            <td>4955975</td>
+        </tr>
+        <tr>
+            <td class="text-left" style="width: 15%;">General Savings</td>
+            <td>184457</td>
+            <td>4791346</td>
+            <td>5500</td>
+            <td>4400</td>
+            <td colspan="2"></td>
+            <td>73100</td>
+            <td>122843</td>
+            <td>116857</td>
+            <td>4839118</td>
+            <td>4955975</td>
+        </tr>
+        <tr>
+            <td class="text-left" style="width: 15%;">Volentary Saving</td>
+            <td>184457</td>
+            <td>4791346</td>
+            <td>5500</td>
+            <td>4400</td>
+            <td colspan="2"></td>
+            <td>73100</td>
+            <td>122843</td>
+            <td>116857</td>
+            <td>4839118</td>
+            <td>4955975</td>
+        </tr>
+        <tr>
+            <td class="text-left" style="width: 15%;">Proyas S.Savings</td>
+            <td>184457</td>
+            <td>4791346</td>
+            <td>5500</td>
+            <td>5500</td>
+            <td colspan="2"></td>
+            <td>73100</td>
+            <td>122843</td>
+            <td>116857</td>
+            <td>4839118</td>
+            <td>4955975</td>
         </tr>
     </table>
 
     <pagebreak />
+
     <h3>3. Member Admission, Dropout, Savers and Attendance Status</h3>
+
     <table>
         <tr>
             <th>Program</th>
@@ -608,7 +626,7 @@
         </tr>
         <tbody>
             <tr>
-                <td>Total</td>
+                <td class="text-left" style="width: 15%;"><strong>Total</strong></td>
                 <td>11</td>
                 <td>11</td>
                 <td>11</td>
@@ -616,10 +634,10 @@
                 <td>11</td>
                 <td>11</td>
                 <td>11</td>
-                <td>11</td>
+                <td>1235</td>
             </tr>
             <tr>
-                <td>Jagoron</td>
+                <td class="text-left" style="width: 15%;">Jagoron</td>
                 <td>11</td>
                 <td>11</td>
                 <td>11</td>
@@ -627,10 +645,10 @@
                 <td>11</td>
                 <td>11</td>
                 <td>11</td>
-                <td>11</td>
+                <td>121</td>
             </tr>
             <tr>
-                <td>Agrosor</td>
+                <td class="text-left" style="width: 15%;">Agrosor</td>
                 <td>11</td>
                 <td>11</td>
                 <td>11</td>
@@ -638,10 +656,10 @@
                 <td>11</td>
                 <td>11</td>
                 <td>11</td>
-                <td>11</td>
+                <td>0</td>
             </tr>
             <tr>
-                <td>Buniad</td>
+                <td class="text-left" style="width: 15%;">Buniad</td>
                 <td>11</td>
                 <td>11</td>
                 <td>11</td>
@@ -649,10 +667,10 @@
                 <td>11</td>
                 <td>11</td>
                 <td>11</td>
-                <td>11</td>
+                <td>56</td>
             </tr>
             <tr>
-                <td>ENRICH IGA</td>
+                <td class="text-left" style="width: 15%;">ENRICH IGA</td>
                 <td>11</td>
                 <td>11</td>
                 <td>11</td>
@@ -660,10 +678,10 @@
                 <td>11</td>
                 <td>11</td>
                 <td>11</td>
-                <td>11</td>
+                <td>1300</td>
             </tr>
             <tr>
-                <td>LEPIG</td>
+                <td class="text-left" style="width: 15%;">LEPIG</td>
                 <td>11</td>
                 <td>11</td>
                 <td>11</td>
@@ -671,10 +689,10 @@
                 <td>11</td>
                 <td>11</td>
                 <td>11</td>
-                <td>11</td>
+                <td>0</td>
             </tr>
             <tr>
-                <td>Proyas SME</td>
+                <td class="text-left" style="width: 15%;">Proyas SME</td>
                 <td>11</td>
                 <td>11</td>
                 <td>11</td>
@@ -682,10 +700,10 @@
                 <td>11</td>
                 <td>11</td>
                 <td>11</td>
-                <td>11</td>
+                <td>0</td>
             </tr>
             <tr>
-                <td>Proyas S.Savings</td>
+                <td class="text-left" style="width: 15%;">Proyas S.Savings</td>
                 <td>11</td>
                 <td>11</td>
                 <td>11</td>
@@ -693,20 +711,21 @@
                 <td>11</td>
                 <td>11</td>
                 <td>11</td>
-                <td>11</td>
+                <td>0</td>
             </tr>
             <tr>
-                <td>Volentary Saving</td>
-                <td>11</td>
-                <td>11</td>
-                <td>11</td>
-                <td>11</td>
-                <td>11</td>
-                <td>11</td>
-                <td>11</td>
-                <td>11</td>
+                <td class="text-left" style="width: 15%;">Volentary Saving</td>
+                <td>1235</td>
+                <td>121</td>
+                <td>0</td>
+                <td>56</td>
+                <td>1300</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
             </tr>
         </tbody>
     </table>
+    <hr style="border: 1px solid black; margin-top: 15px;">
 </body>
 </html>
