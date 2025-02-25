@@ -28,12 +28,7 @@ class ReportController extends Controller
         //$mpdf->SetFooter('{PAGENO} of {nb}', 'O');  // 'O' removes the default line
 
         // Set custom footer without horizontal line using inline CSS
-        // $footerHtml = '<div style="text-align:right; padding-top: 10px; display: flex; justify-content: space-between;">
-        // <p>Printed Date: </p>
-        // <p>Page {PAGENO} of {nb}</p>
-        // </div>';
-
-        $footerHtml = '
+        /*$footerHtml = '
             <table width="100%" style="border-collapse: collapse; border: none;">
                 <tr style="border: none;">
                     <td style="text-align:left; padding-top: 10px; border: none;">Printed Date: ' . date('d-m-Y') . '</td>
@@ -41,10 +36,14 @@ class ReportController extends Controller
                 </tr>
             </table>';
         
-        $mpdf->SetHTMLFooter($footerHtml);
+        $mpdf->SetHTMLFooter($footerHtml);*/
 
         $mpdf->WriteHTML($html);
+
+        // $mpdf->Output();
+        // $mpdf->Output('Proyas Consolidate Report-'. time() . '.pdf', 'D');
+
+        $mpdf->Output('Proyas Consolidate Report-'. time() . '.pdf', 'I');
         
-        $mpdf->Output();
     }
 }
