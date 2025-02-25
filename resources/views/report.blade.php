@@ -69,7 +69,6 @@
         <span>
             <strong>@php echo date('F-Y'); @endphp</strong>
         </span>
-        
     </htmlpageheader>
     
     <htmlpagefooter name="page-footer">

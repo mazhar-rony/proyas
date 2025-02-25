@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Member;
 use Illuminate\Http\Request;
 
 class ReportController extends Controller
@@ -9,6 +10,44 @@ class ReportController extends Controller
     public function form()
     {
         return view('form');
+    }
+
+    public function showdata()
+    {
+        $datas = Member::all();
+        $totalSamityMale = Member::sum('samity_male');
+        $totalSamityFemale = Member::sum('samity_female');
+        $totalSamityMemberCount = $totalSamityMale + $totalSamityFemale;
+        $totalMemberMale = Member::sum('member_male');
+        $totalMemberFemale = Member::sum('member_female');
+        $totalMemberCount = $totalMemberMale + $totalMemberFemale;
+
+        return view('show_data', compact('datas', 'totalSamityMale', 'totalSamityFemale', 'totalMemberMale', 'totalMemberFemale', 'totalSamityMemberCount', 'totalMemberCount'));
+    }
+
+    public function generatePDF()
+    {
+        $info = $this->showdata();
+        
+        $datas = $info->datas;
+        $totalSamityMale = $info->totalSamityMale;
+        $totalSamityFemale = $info->totalSamityFemale;
+        $totalSamityMemberCount = $info->totalSamityMemberCount;
+        $totalMemberMale = $info->totalMemberMale;
+        $totalMemberFemale = $info->totalMemberFemale;
+        $totalMemberCount = $info->totalMemberCount;
+
+        $html = view('show_pdf', compact('datas', 'totalSamityMale', 'totalSamityFemale', 'totalMemberMale', 'totalMemberFemale', 'totalSamityMemberCount', 'totalMemberCount'));
+
+        $mpdf = new \Mpdf\Mpdf(['format' => 'A4']);
+
+        $mpdf->setAutoTopMargin = 'stretch';
+
+        $mpdf->setAutoBottomMargin = 'stretch';
+
+        $mpdf->WriteHTML($html);
+
+        $mpdf->Output('Samity and Members Information-'. time() . '.pdf', 'I');
     }
 
     public function generateReport()

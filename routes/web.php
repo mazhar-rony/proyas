@@ -8,4 +8,6 @@ Route::get('/', function () {
 });
 
 Route::get('form', [ReportController::class, 'form']);
+Route::get('showdata', [ReportController::class, 'showdata'])->name('showdata');
+Route::get('generate-pdf', [ReportController::class, 'generatePDF'])->name('generatePDF');
 Route::post('report', [ReportController::class, 'generateReport'])->name('report');
