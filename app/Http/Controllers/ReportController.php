@@ -9,7 +9,7 @@ class ReportController extends Controller
 {
     public function form()
     {
-        return view('form');
+        return view('form2');
     }
 
     public function showdata()
@@ -23,6 +23,12 @@ class ReportController extends Controller
         $totalMemberCount = $totalMemberMale + $totalMemberFemale;
 
         return view('show_data', compact('datas', 'totalSamityMale', 'totalSamityFemale', 'totalMemberMale', 'totalMemberFemale', 'totalSamityMemberCount', 'totalMemberCount'));
+    }
+
+    public function view()
+    {
+        // return view('view');
+        return response()->json('ok', 200);
     }
 
     public function generatePDF()

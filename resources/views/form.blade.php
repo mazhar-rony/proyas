@@ -87,6 +87,8 @@
     <!-- Submit Button -->
     <button type="submit" class="btn btn-primary">Generate PDF</button>
     <a href="{{ route('showdata') }}" class="btn btn-success">Show Data</a>
+    <a href="{{ route('view') }}" class="btn btn-warning">View</a>
+    <button class="btn btn-danger">Go with Me</button>
   </form>
 </div>
 
