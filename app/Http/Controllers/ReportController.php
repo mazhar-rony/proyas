@@ -91,4 +91,23 @@ class ReportController extends Controller
         $mpdf->Output('Proyas Consolidate Report-'. time() . '.pdf', 'I');
         
     }
+
+    public function printDocument() 
+    {
+        $html = view('report');
+
+        $mpdf = new \Mpdf\Mpdf(['format' => 'A4']);
+
+        $mpdf->setAutoTopMargin = 'stretch';
+
+        $mpdf->setAutoBottomMargin = 'stretch';
+
+        $mpdf->WriteHTML($html);
+
+        // Save the PDF temporarily
+        $filePath = storage_path('app/public/report.pdf');
+        $mpdf->Output($filePath, 'F'); // 'F' saves the file locally
+
+        return response()->json(['file' => asset('storage/report.pdf')]);
+    }
 }

@@ -144,7 +144,6 @@
   <div id="dataTable" style="margin-top: 50px;"></div>
 </div>
 
-
 <!-- Bootstrap JS and dependencies -->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
@@ -783,6 +782,7 @@
     </div>`;
 
   $(document).ready(function() {
+            // Load Table Data Below Form
             $("#loadData").on("click", function(event) {
                 event.preventDefault();
                 $.ajax({
@@ -792,12 +792,34 @@
                         $("#dataTable").html($html);
                         $("#printButton").addClass("btn btn-primary");
                         $("#pdfButton").addClass("btn btn-success");
+
+                        // Print Document Directly
+                        $("#printButton").on("click", function(event) {console.log("print");
+                            event.preventDefault();
+                            $.ajax({
+                                url: "{{ route('print.document') }}",
+                                type: "GET",
+                                dataType: "json",
+                                success: function(response) {
+                                      var printWindow = window.open(response.file, '_blank');
+                                      printWindow.onload = function() {
+                                      printWindow.print();
+                                    };
+                                },
+                                error: function(xhr, status, error) {
+                                    console.error("Error printing PDF:", error);
+                                }
+                            });
+                      });
+
                     },
                     error: function() {
                         $("#dataTable").html("<p>Error loading data.</p>");
                     }
                 });
             });
+
+            
         });
 </script>
 </body>
