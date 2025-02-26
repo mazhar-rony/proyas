@@ -112,7 +112,7 @@
     </table>
 
     <div style="margin-top: 20px; text-align: center;">
-        <a href="{{ route('generatePDF') }}" target="_blank"><button style="padding: 5px;">Donload PDF</button></a>
+        <a href="{{ route('generatePDF') }}" target="_blank"><button style="padding: 5px;">Download PDF</button></a>
     </div>
 </body>
 </html>
