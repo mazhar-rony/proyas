@@ -793,18 +793,24 @@
                         $("#printButton").addClass("btn btn-primary");
                         $("#pdfButton").addClass("btn btn-success");
 
-                        // Print Document Directly
-                        $("#printButton").on("click", function(event) {console.log("print");
+                        // Print Document with Print Dialog
+                        $("#printButton").on("click", function(event) {
                             event.preventDefault();
                             $.ajax({
                                 url: "{{ route('print.document') }}",
                                 type: "GET",
                                 dataType: "json",
                                 success: function(response) {
-                                      var printWindow = window.open(response.file, '_blank');
-                                      printWindow.onload = function() {
-                                      printWindow.print();
-                                    };
+                                    //   var printWindow = window.open(response.file, '_blank');
+                                    //   printWindow.onload = function() {
+                                    //   printWindow.print();
+                                    // };
+
+                                    // Print Directly Without Showing the Print Dialog
+                                    var iframe = $('<iframe>').attr('src', response.file).css('visibility', 'hidden').appendTo('body');
+                                    iframe.on('load', function() {
+                                        this.contentWindow.print();
+                                    });
                                 },
                                 error: function(xhr, status, error) {
                                     console.error("Error printing PDF:", error);
