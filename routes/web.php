@@ -15,5 +15,6 @@ Route::get('/generate-pdf', [ReportController::class, 'generatePDF'])->name('gen
 // Route::post('/report', [ReportController::class, 'generateReport'])->name('report');
 Route::get('/report', [ReportController::class, 'generateReport'])->name('report');
 Route::get('/print', [ReportController::class, 'printDocument'])->name('print.document');
+Route::get('/export-excel', [ReportController::class, 'exportExcel'])->name('export.excel');
 Route::get('/view', [ReportController::class, 'view'])->name('view');
 Route::resource('programs', ProgramController::class);

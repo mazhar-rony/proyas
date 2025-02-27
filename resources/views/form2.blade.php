@@ -778,6 +778,7 @@
         <div style="margin-top: 20px; text-align: center;">
           <button id="printButton">Print</button>
           <a href="{{ route('report') }}" target="_blank"><button id="pdfButton" style="padding: 5px;">PDF</button></a>
+          <a href="{{ route('export.excel') }}"><button id="excelButton">Export Excel</button></a>
         </div>
     </div>`;
 
@@ -792,6 +793,8 @@
                         $("#dataTable").html($html);
                         $("#printButton").addClass("btn btn-primary");
                         $("#pdfButton").addClass("btn btn-success");
+                        $("#excelButton").addClass("btn btn-warning");
+                        
 
                         // Print Document with Print Dialog
                         $("#printButton").on("click", function(event) {
